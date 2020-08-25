@@ -5,7 +5,6 @@ class Obstacle {
         this.x = (Math.random() * ((width-100)) + 100) / 1.5;
         this.y = 10;
         this.image = img;
-        this.starscore = 0;
       }
 
     collision(playerInfo) {
@@ -16,8 +15,6 @@ class Obstacle {
         //console.log(obstacleX, obstacleY, playerX, playerY);
     
         if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
-            //this.starscore += 1;
-            // console.log(this.starscore);
           return true;
         }
       }

@@ -1,6 +1,7 @@
 class Game {
     constructor() {
         this.obstacles = [];
+        this.starscore = [];
       }
     preloadGame() {
         
@@ -50,8 +51,8 @@ class Game {
          
           this.obstacles = this.obstacles.filter((obstacle) => {
             if (obstacle.collision(this.player)) {
-                this.obstacles.starscore ++;
-                console.log(this.obstacles.starscore.length);
+                this.starscore.push(1)
+                document.querySelector('h3 span').innerHTML = this.starscore.length;
               return false;
             } else {
                 
