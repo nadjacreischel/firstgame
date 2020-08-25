@@ -2,6 +2,7 @@ class Game {
     constructor() {
         this.obstacles = [];
         this.starscore = [];
+        this.meanchocolates = [];
       }
     preloadGame() {
         
@@ -14,6 +15,7 @@ class Game {
             this.playerImg = loadImage("./assets/character.gif");
             this.obstacleImg = loadImage("./assets/Star.png");
             this.obstacleDonut = loadImage("./assets/DonutNoBackground.png")
+            this.meanChoco = loadImage("./assets/choco_walk.png")
 
     }
 
@@ -45,9 +47,15 @@ class Game {
             this.obstacles.push(new Obstacle(this.obstacleDonut));
           }
 
+          if (frameCount % 280 === 0) {
+            this.meanchocolates.push(new Meanchocolate(this.meanChoco));
+          }
+
           this.obstacles.forEach(obstacle => {
             obstacle.drawObstacle();
           })
+          
+         
          
           this.obstacles = this.obstacles.filter((obstacle) => {
             if (obstacle.collision(this.player)) {
@@ -57,19 +65,25 @@ class Game {
             } else {
                 
                 return true;
-            }
-            
+            }        
         });
 
-    // countScore ()
-    //     {
-                
-    //         if (obstacles.collision = "false")
-    //         this.obstacles.starscore ++ ;
-    //         console.log(this.obstacles.starscore);
-    //         } 
-        // let score = document.getElementById("score")
-        // if (obstacle.collision(this.player) = "true")
-        // score += 1 
-    }
+    this.meanchocolates.forEach(meanchocolate => {
+        meanchocolate.drawObstacle();
+     })
+
+    this.meanchocolates = this.meanchocolates.filter((chocolate) => {
+        if (chocolate.collision(this.player)) {
+            frameRate(0);
+            alert(`Looser, your score was ${this.starscore.length}`)
+            location.reload();
+ 
+          return false;
+        } else { 
+            return true;
+        }
+    });
+   
+
+}
 }
