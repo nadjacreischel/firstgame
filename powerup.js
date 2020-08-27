@@ -1,7 +1,7 @@
-class Meanchocolate {
+class powerUp {
     constructor(img) {
-        this.height = 120;
-        this.width = 120;
+        this.height = 80;
+        this.width = 80;
         this.x = (Math.random() * ((width-100)) + 100) / 1.5;
         this.y = 10;
         this.image = img;
@@ -17,11 +17,6 @@ class Meanchocolate {
         if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
           return true;
         }
-        // if((playerInfo.y >= this.y && playerInfo.y <= this.y + this.height/2) && ((playerInfo.x + playerInfo.width/3) >= this.x  && (playerInfo.x - playerInfo.width/3) <= this.x + this.width) ) {
-    
-        //   console.log(" here ", playerInfo.x, this.x, this.width, this.x + this.width, this.x - this.width /2)
-        //   return true
-       // }
       }
 
 
@@ -32,9 +27,6 @@ class Meanchocolate {
             this.x = width - this.width;
           }
         this.y += 4;
-        // fill("red")
-        // rect(this.x, this.y, this.height, this.width);
-
         image(this.image, this.x, this.y, this.width, this.height);
      }
     }

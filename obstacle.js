@@ -1,7 +1,7 @@
 class Obstacle {
     constructor(img) {
-        this.height = 60;
-        this.width = 60;
+        this.height = 120;
+        this.width = 120;
         this.x = (Math.random() * ((width-100)) + 100) / 1.5;
         this.y = 10;
         this.image = img;
@@ -14,7 +14,7 @@ class Obstacle {
         let playerY = playerInfo.y + playerInfo.height / 2;
         //console.log(obstacleX, obstacleY, playerX, playerY);
     
-        if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
+        if (dist(obstacleX, obstacleY, playerX, playerY) < 45) {
           return true;
         }
       }

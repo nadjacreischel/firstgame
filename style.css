@@ -11,3 +11,39 @@
 h3 {
   color: white;
 }
+
+p {
+  color: white;
+}
+
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  /* width: 80%; */
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* .controls {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+padding: none;
+} */
+
+/* .controls-container li {
+display: flex;
+flex-direction: row;
+align-items: center;
+float: left;
+padding: 5px;
+list-style: none;
+} */
+
+/* .controls-container img {
+padding: 5px;
+} */
