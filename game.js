@@ -38,7 +38,7 @@ class Game {
             this.powerupImg = loadImage("./assets/Fireball-powerup.png")
             this.meanCandy = loadImage("./assets/alien-robot-dancing.gif")
             this.playerPowerup = loadImage("./assets/BMO.gif")
-            this.finalScreen = loadImage("./assets/final screen.jpeg")
+            this.finalScreen = loadImage("./assets/final screen.png")
     }
 
     setupGame() {
@@ -96,7 +96,7 @@ class Game {
             this.meanchocolates.push(new Meanchocolate(this.meanCandy));
           }
 
-          if (frameCount % 30 === 0) {
+          if (frameCount % 360 === 0) {
             this.powerups.push(new powerUp(this.powerupImg));
           }
           
@@ -123,26 +123,6 @@ class Game {
             }        
         });
 
-          this.meanchocolates.forEach(meanchocolate => {
-              meanchocolate.drawObstacle();
-          })
-
-          this.meanchocolates = this.meanchocolates.filter((chocolate) => {
-              if (chocolate.collision(this.player)) {
-                  frameRate(0);
-                  this.screen.drawScreen();
-                //  setTimeout(() => {
-                //   alert(`Looser, your score was ${this.starscore.length}`)
-                //   location.reload();
-                //  }, 3000);
-                  
-      
-                return false;
-              } else { 
-                  return true;
-              }
-          });
-
 
           this.powerups.forEach(powerup => {
             powerup.drawObstacle();
@@ -157,6 +137,31 @@ class Game {
             }
           })
         
+        
+          this.meanchocolates.forEach(meanchocolate => {
+            meanchocolate.drawObstacle();
+        })
+
+        this.meanchocolates = this.meanchocolates.filter((chocolate) => {
+            if (chocolate.collision(this.player)) {
+                frameRate(0);
+                this.screen.drawScreen();
+                // if (keyCode === 32) {
+                //   location.reload();
+                // } if (keyCode=== 13) {
+                // location.reload();
+                // }
+               setTimeout(() => {
+                // alert(`Looser, your score was ${this.starscore.length}`)
+                location.reload();
+               }, 3000);
+                
+    
+              return false;
+            } else { 
+                return true;
+            }
+        });
 
 }
 }

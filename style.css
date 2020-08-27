@@ -39,6 +39,7 @@ p {
 .text strong {
   font-size: 1em;
   padding-bottom: 200px;
+  line-height: 1.5;
 }
 
 .levels {
@@ -64,7 +65,6 @@ width: 50px;
 
 .controls p {
   color: green;
-  padding-left: 30px;
 }
 
 .controls div {

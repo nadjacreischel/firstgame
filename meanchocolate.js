@@ -14,7 +14,7 @@ class Meanchocolate {
         let playerY = playerInfo.y + playerInfo.height / 2;
         //console.log(obstacleX, obstacleY, playerX, playerY);
     
-        if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
+        if (dist(obstacleX, obstacleY, playerX, playerY) < 40) {
           return true;
         }
         // if((playerInfo.y >= this.y && playerInfo.y <= this.y + this.height/2) && ((playerInfo.x + playerInfo.width/3) >= this.x  && (playerInfo.x - playerInfo.width/3) <= this.x + this.width) ) {

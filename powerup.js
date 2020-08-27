@@ -1,7 +1,7 @@
 class powerUp {
     constructor(img) {
-        this.height = 80;
-        this.width = 80;
+        this.height = 50;
+        this.width = 50;
         this.x = (Math.random() * ((width-100)) + 100) / 1.5;
         this.y = 10;
         this.image = img;
@@ -14,7 +14,7 @@ class powerUp {
         let playerY = playerInfo.y + playerInfo.height / 2;
         //console.log(obstacleX, obstacleY, playerX, playerY);
     
-        if (dist(obstacleX, obstacleY, playerX, playerY) < 50) {
+        if (dist(obstacleX, obstacleY, playerX, playerY) < 60) {
           return true;
         }
       }

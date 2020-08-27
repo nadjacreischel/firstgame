@@ -14,7 +14,7 @@ class Obstacle {
         let playerY = playerInfo.y + playerInfo.height / 2;
         //console.log(obstacleX, obstacleY, playerX, playerY);
     
-        if (dist(obstacleX, obstacleY, playerX, playerY) < 45) {
+        if (dist(obstacleX, obstacleY, playerX, playerY) < 60) {
           return true;
         }
       }

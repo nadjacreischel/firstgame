@@ -4,7 +4,7 @@ class Player {
       this.height = 60;
       this.width = 120;
       this.x = 150;
-      this.y = 600;
+      this.y = 500;
       this.image;
       this.powerUpImage;
       this.level = 0;
@@ -56,14 +56,14 @@ class Player {
     
     leftClick () {
         console.log("This will be a left click");
-        this.x -= 50;
+        this.x -= 10;
     }
     rightClick () {
         console.log("This will be a right click");
-        this.x += 50;
+        this.x += 10;
     }
     forward () {
       console.log("This will be a powerup");
-      this.y -= 50;
+      this.y -= 30;
     }
   }

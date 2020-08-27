@@ -1,26 +1,34 @@
 const game = new Game();
-
+let mode;
 function preload() {
   game.preloadGame();
 }
 function setup() {
-  createCanvas(800, 800);
+  mode = 0;
+  createCanvas(800, 680);
   game.setupGame();
 }
 
 function draw() {
-  game.drawGame();
+if (mode === 1) {
+game.drawGame();
 }
 
-function keyPressed() {
-    if (keyCode === 37) {
+    if (keyIsDown(37)) {
     game.player.leftClick();
     }
 
-    if (keyCode === 39) {
+    if (keyIsDown(39)) {
     game.player.rightClick();
     }
 
-  
+    if (keyIsDown(13)) {
+      mode = 1;
+  }
+
+  if (keyIsDown(32)) {
+    mode = 1;
+}
+   
 }
 
