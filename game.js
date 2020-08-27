@@ -131,10 +131,10 @@ class Game {
               if (chocolate.collision(this.player)) {
                   frameRate(0);
                   this.screen.drawScreen();
-                 setTimeout(() => {
-                  alert(`Looser, your score was ${this.starscore.length}`)
-                  location.reload();
-                 }, 3000);
+                //  setTimeout(() => {
+                //   alert(`Looser, your score was ${this.starscore.length}`)
+                //   location.reload();
+                //  }, 3000);
                   
       
                 return false;
