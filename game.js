@@ -100,7 +100,7 @@ class Game {
             this.powerups.push(new powerUp(this.powerupImg));
           }
           
-          if (frameCount > 1000 && frameCount % 167 === 0) {
+          if (frameCount > 2000 && frameCount % 167 === 0) {
             console.log("something5");
             this.powerups.push(new powerUp(this.powerupImg));
           }
